@@ -1,0 +1,97 @@
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  width: 360px;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #c57b7b;
+}
+
+.input-group, .filter-group {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+#taskInput, #filterInput {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+#addBtn {
+  padding: 10px 14px;
+  border: none;
+  background: #cecece;
+  color: rgb(253, 253, 253);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+#addBtn:hover {
+  background: #a7e2aa;
+}
+
+#taskList {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+#taskList li {
+  background: #fbdcdc;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+}
+
+#taskList li:hover {
+  background: #f0f0f0;
+}
+
+button.deleteBtn {
+  background: #e63946;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+button.deleteBtn:hover {
+  background: #d62828;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+  opacity: 0.7;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
